@@ -1,0 +1,106 @@
+.input-group.md-form.form-sm.form-1 input {
+    border: 1px solid #bdbdbd;
+    margin-right: 10px;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.login {
+    background-color: #2176bd;
+    border: none;
+    width: 80px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.loginbtn {
+    border-radius: 10%;
+}
+
+.lead {
+    margin-top: 5px;
+    margin-right: 200px;
+    width: 400px;
+}
+
+.search1 {
+    align-self: center;
+    margin-top: -60px;
+    justify-content: center;
+    width: 1000px;
+    height: 50px;
+}
+
+.search2 {
+    margin-right: 500px;
+}
+
+.btn20 {
+    border-radius: 10%;
+}
+
+.box1 {
+    width: 500px;
+    height: 170px;
+    background: #2176bd;
+}
+
+.cd1 {
+    width: 30px;
+    height: 10px;
+}
+
+.card10 {
+    margin-top: -80px;
+}
+
+.late {
+    margin-left: 150px;
+}
+
+.f {
+    float: right;
+    display: block;
+}
+
+[class*="sidebar-dark"] .user-panel {
+    border-bottom: 1px outset #cca07b;
+}
+
+.sbg {
+    background-color: #99785c;
+}
+
+[class*="sidebar-dark"] .brand-link {
+    border: 1px outset #cca07b;
+    border-width: medium;
+    font-style: italic;
+    font-family: Sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+
+.navbar-white {
+    background-color: #99785c;
+}
+
+.te {
+    color: #99785c;
+}
+
+.fab,
+.far {
+    font-weight: 700;
+}
+
+[class*="sidebar-dark-"] .sidebar a {
+    color: #553206;
+}
+
+.main-footer {
+    text-align: center;
+}
