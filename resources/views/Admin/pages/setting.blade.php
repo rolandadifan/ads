@@ -12,12 +12,12 @@
             @error('facebook') <div class="text-muted">{{ $message }}</div> @enderror
         </div>
         <div class="form-group ml-3 mr-5">
-            <label for="whatsup" class="form-control-label">Twitter</label>
+            <label for="whatsup" class="form-control-label">whatsup</label>
             <input type="text" name="whatsup" value="{{ old('whatsup') ? old('whatsup') : $setting->whatsup }}" class="form-control @error('whatsup') is-invalid @enderror" />
             @error('whatsup') <div class="text-muted">{{ $message }}</div> @enderror
         </div>
         <div class="form-group ml-3 mr-5">
-            <label for="instagram" class="form-control-label">whatsup</label>
+            <label for="instagram" class="form-control-label">instagram</label>
             <input type="text" name="instagram" value="{{ old('instagram') ? old('instagram') : $setting->instagram }}" class="form-control @error('instagram') is-invalid @enderror" />
             @error('instagram') <div class="text-muted">{{ $message }}</div> @enderror
         </div>
