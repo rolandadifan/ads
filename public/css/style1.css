@@ -26,7 +26,10 @@ html {
     header .nav-link {
         font-size: 25px;
         transition: all 0.2s;
-        color: rgb(246, 0, 0) !important;
+        color: #c86f3c !important;
+        font-weight: bold;
+        z-index: 1000;
+        position: relative;
     }
 
     header .nav-link:hover {
@@ -49,17 +52,12 @@ html {
 
     /* jumbotron */
     .jumbotron {
-        height: 80vh;
-        background-image: linear-gradient(
-            to bottom,
-            rgba(250, 250, 250, 0.246),
-            rgba(0, 0, 0, 0.7),
-            url("/image/jumbotron.png")
-        );
+        height: 100vh;
+        background-color: #999;
     }
 
     .jumbotron h1 {
-        font-size: 35px;
+        font-size: 25px;
         font-weight: 300;
         color: #fff;
     }
@@ -69,7 +67,7 @@ html {
     }
 
     .jumbotron p {
-        font-size: 22px;
+        font-size: 19px;
         font-weight: 300;
         color: #fff;
         text-align: justify;
@@ -106,14 +104,12 @@ html {
     }
 
     .search-2 {
-        transform: translateX(0);
-        margin-bottom: 20px;
-        margin-top: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .search-2 .fa-th-large {
-        display: block;
-        margin-right: 10px;
+        display: none;
     }
 
     .search-2 a {
@@ -134,26 +130,32 @@ html {
 
     .ads-link a:hover {
         color: #6e3c1f !important;
-        border-bottom: 3px solid #707070;
+        border: none;
     }
 
-    .highlight {
+    .card-img {
+        height: 353px;
+    }
+
+    .ads-item .text-images .text-img-content {
+        margin-top: 70%;
+    }
+
+    .highlights {
         background-color: #d79671;
         height: 30px;
         width: 150px;
         color: #fff;
-        transform: translate(-10px, 344px);
     }
 
-    .highlight h6 {
+    .highlights h6 {
         font-size: 15px !important;
         text-align: center;
         line-height: 30px;
     }
 
-    .price {
-        color: #fff;
-        transform: translate(210px, 315px);
+    .prices {
+        color: #999;
     }
 
     .col-md-4 .card {
@@ -210,6 +212,7 @@ html {
     .about .card-title {
         font-size: 35px;
     }
+
     .about .card-title::after {
         content: "";
         display: block !important;
@@ -245,7 +248,7 @@ html {
     }
 
     .introduction-icon {
-        margin-top: 0;
+        margin-top: 40px;
     }
 
     .introduction-icon h3 {
@@ -804,10 +807,13 @@ html {
         font-family: "Bangers", sans-serif;
     }
 
-    header ul li a {
-        font-size: 20px;
+    header .nav-link {
+        font-size: 25px;
         transition: all 0.2s;
-        color: rgba(0, 0, 0, 1);
+        color: #f3f3f3 !important;
+        font-weight: bold;
+        z-index: 1000;
+        position: relative;
     }
 
     header .btn-login {
@@ -886,7 +892,7 @@ html {
     }
 
     .search-2 {
-        transform: translateX(120px);
+        transform: translate(80px, 10px);
         margin-bottom: 20px;
     }
 
@@ -895,7 +901,7 @@ html {
     }
 
     .search-2 a {
-        transform: translateX(-50px);
+        transform: translateX(0px);
     }
 
     /* ads */
@@ -909,23 +915,29 @@ html {
         border-bottom: 3px solid #707070;
     }
 
-    .highlight {
-        background-color: #d79671;
-        height: 30px;
-        width: 200px;
-        color: #fff;
-        transform: translate(-10px, 479px);
+    .card-img {
+        height: 353px;
     }
 
-    .highlight h6 {
+    .ads-item .text-images .text-img-content {
+        margin-top: 100%;
+    }
+
+    .highlights {
+        background-color: #d79671;
+        height: 30px;
+        width: 150px;
+        color: #fff;
+    }
+
+    .highlights h6 {
         font-size: 15px !important;
         text-align: center;
         line-height: 30px;
     }
 
-    .price {
-        color: #fff;
-        transform: translate(350px, 450px);
+    .prices {
+        color: #999;
     }
 
     .col-md-4 .card {
@@ -1268,6 +1280,7 @@ html {
     header .nav-link {
         color: rgb(0, 0, 0, 0.5) !important;
     }
+
     header .nav-link:hover {
         color: #d79671 !important;
     }
@@ -1290,7 +1303,7 @@ html {
                 rgba(0, 0, 0, 0) 40%,
                 rgba(0, 0, 0, 0.5) 60%
             ),
-            url(img/jumbotron.png) !important;
+            url("../image/jumbotron.png") !important;
         background-size: cover;
         background-attachment: fixed;
         background-position-x: 0;
@@ -1307,7 +1320,7 @@ html {
     }
 
     .jumbotron h1 span {
-        margin-left: 200px;
+        margin-left: 150px;
     }
 
     .jumbotron br {
@@ -1369,11 +1382,6 @@ html {
         text-decoration: none;
     }
 
-    .search-panel option::before {
-        content: "";
-        background-image: url(img/grid.png);
-    }
-
     .search-panel a {
         font-size: 18px;
         color: #000;
@@ -1382,8 +1390,7 @@ html {
     }
 
     .search-2 {
-        transform: translateX(0);
-        margin-bottom: 0;
+        margin-bottom: 25px;
     }
 
     .search-2 .fa-th-large {
@@ -1416,28 +1423,29 @@ html {
         transform: translateY(-120px);
     }
 
-    .text-images {
-        transform: translateY(311px);
+    .card-img {
+        height: 353px;
     }
 
-    .highlight {
+    .ads-item .text-images .text-img-content {
+        margin-top: 100%;
+    }
+
+    .highlights {
         background-color: #d79671;
         height: 30px;
-        width: 200px;
+        width: 150px;
         color: #fff;
-        margin-left: -10px;
-        transform: translate(0);
     }
 
-    .highlight h6 {
+    .highlights h6 {
         font-size: 15px !important;
         text-align: center;
         line-height: 30px;
     }
 
-    .price {
-        color: #fff;
-        transform: translate(25px, 0);
+    .prices {
+        color: #999;
     }
 
     .ads-title {
@@ -1453,10 +1461,6 @@ html {
     .card-text {
         font-size: 18px;
         font-weight: 400;
-    }
-
-    .card-footer {
-        height: 60px;
     }
 
     .card-footer p {

@@ -29,13 +29,13 @@
 <div class="container container-search-panel">
     <div class="row justify-content-center">
         <div class="col-md-12 search-panel">
-            <div class="row justify-content-between">
-                <div class="col-md-8 col-sm-4">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-6 col-sm-6">
                     <form class="form-inline">
                         <input type="text" style="background-image: url('/image/search.png');" placeholder="search..." />
                     </form>
                 </div>
-                <div class="col-md-4 col-sm-8 search-2">
+                <div class="col-md-6 col-sm-6 search-2">
                     <form class="form-inline">
                         <i class="fa fa-th-large" aria-hidden="true"></i>
                         <select class="mr-5">
@@ -66,15 +66,15 @@
     <div class="container ads-item" data-50-top="opacity:1;left:0px;" data-400-top="opacity:0;left:100px;">
         <div class="row mb-3">
             @foreach($ads as $ad)
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-6 mt-3">
                 <div class="card">
-                    <img src="{{ url($ad->photo1) }}" class="card-img-top" alt="Ads-images1" />
-                    <div class="fluid-container card-img-overlay">
-                        <div class="row justify-content-between text-images">
-                            <div class="col-md-5 col-xs-6 highlight">
+                    <img src="{{ url($ad->photo1) }}" class="card-img" alt="Ads-images1" />
+                    <div class="fluid-container card-img-overlay text-images">
+                        <div class="row justify-content-between text-img-content">
+                            <div class="col-lg-5 col-5 col-md-5  highlights">
                                 <h6>HIGHLIGHT</h6>
                             </div>
-                            <div class="col-md-6 offset-md-1 col-xs-5 offset-xs-1 price">
+                            <div class="col-lg-6 offset-lg-1 col-md-7 col-6 prices">
                                 <p>RP. {{$ad->price}}</p>
                             </div>
                         </div>
