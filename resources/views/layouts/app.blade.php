@@ -14,6 +14,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
 
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -25,6 +26,7 @@
 
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -39,6 +41,7 @@
         @include('includes.navbar')
 
         <main class="py-0">
+            @include('sweetalert::alert')
             @yield('content')
         </main>
         </div>

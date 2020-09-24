@@ -2,6 +2,7 @@
 @section('tittle', 'ADS LIST')
 @section('content')
 
+@include('partials.alerts')
 <a href="{{route('ads.create')}}" class="f btn btn-primary btn-md mb-3 active " role="button" aria-pressed="true">+ ADS</a>
 <table class="table table-striped">
     <thead>

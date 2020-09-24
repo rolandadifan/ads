@@ -3,10 +3,10 @@
         <div class="row justify-content-around">
             <div class="col-md-3">
                 <ul class="icon">
-                    <li class="fb"><a href="#"> Facebook</a></li>
-                    <li class="twitter"><a href="#">Twitter</a></li>
-                    <li class="ig"><a href="#">Instagram</a></li>
-                    <li class="wa"><a href="#">Whatsapp</a></li>
+                    <li class="fb"><a href="{{$setting->facebook}}"> Facebook</a></li>
+                    <li class="twitter"><a href="{{$setting->whatsup}}">Twitter</a></li>
+                    <li class="ig"><a href="{{$setting->instagram}}">Instagram</a></li>
+                    <li class="wa"><a href="{{$setting->twitter}}">Whatsapp</a></li>
                 </ul>
             </div>
             <div class="col-md-3">

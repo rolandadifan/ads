@@ -46,7 +46,7 @@ class CategoryController extends Controller
         $data = $request->all();
 
         Categorie::create($data);
-        return redirect()->route('category.index');
+        return redirect()->route('category.index')->with('success', 'Data berhasil Ditambahkan');
     }
 
     /**
@@ -94,6 +94,6 @@ class CategoryController extends Controller
         $flight = Categorie::find($id);
 
         $flight->delete();
-        return redirect()->route('category.index');
+        return redirect()->route('category.index')->with('warning', 'Data berhasil Dihapus');
     }
 }

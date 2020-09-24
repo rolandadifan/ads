@@ -1,7 +1,7 @@
 @extends('Admin.layouts.app')
 @section('tittle', 'PENDING LIST')
 @section('content')
-
+@include('sweetalert::alert')
 <table class="table table-striped">
     <thead>
         <tr>

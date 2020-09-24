@@ -64,7 +64,7 @@ class AdsController extends Controller
         );
 
         Ad::create($data);
-        return redirect()->route('ads.index');
+        return redirect()->route('ads.index')->with('success', 'Data Berhasil Ditambah');
     }
 
     /**
@@ -120,7 +120,7 @@ class AdsController extends Controller
         $ads = Ad::findOrFail($id);
         $ads->update($data);
 
-        return redirect()->route('ads.index');
+        return redirect()->route('ads.index')->with('success', 'Data Berhasil DiUpdate');
     }
 
     /**
@@ -134,6 +134,6 @@ class AdsController extends Controller
         $ad = Ad::findOrFail($id);
         $ad->delete();
 
-        return redirect()->route('ads.index');
+        return redirect()->route('ads.index')->with('warning', 'Data Berhasil Dihapus');
     }
 }

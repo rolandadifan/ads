@@ -98,13 +98,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/forms/general.html" class="nav-link">
+                            <a href="{{route('about.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>About</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/forms/advanced.html" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Contact</p>
                             </a>
@@ -112,7 +112,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="{{route('message.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-envelope"></i>
                         <p>
                             Message
@@ -121,7 +121,7 @@
                 </li>
                 <li class="nav-header"></li>
                 <li class="nav-item">
-                    <a href="pages/calendar.html" class="nav-link">
+                    <a href="{{route('setting.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-cog"></i>
                         <p>
                             Setting

@@ -23,5 +23,8 @@ Route::resource('admin', 'AdminController');
 Route::resource('pending', 'PendingController');
 Route::resource('active', 'ActiveController');
 Route::resource('category', 'CategoryController');
+Route::resource('message', 'MessageController');
+Route::resource('about', 'AboutController');
+Route::resource('setting', 'SettingController');
 Route::get('pending/status/{id}', 'PendingController@Status');
 Route::get('active/status/{id}', 'ActiveController@Status');

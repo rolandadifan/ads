@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ad;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ActiveController extends Controller
 {
@@ -101,7 +101,7 @@ class ActiveController extends Controller
             DB::table('ads')->where('id', $id)->update([
                 'status' => 'PENDING'
             ]);
-
+            Alert::error('Ad In-Active');
             return redirect()->route('active.index');
         }
     }

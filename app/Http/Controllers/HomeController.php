@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Ad;
 use App\Models\Categorie;
+use App\Models\About;
+use App\Models\Setting;
 use Illuminate\Http\Request;
+
 
 class HomeController extends Controller
 {
@@ -16,11 +19,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $ads = Ad::where('status', 'ACTIVE', 'desc')->take(6)->get();
+        $ads = Ad::where('status', 'ACTIVE')
+            ->orderBy('created_at', 'desc')
+            ->take(6)
+            ->get();
         $category = Categorie::all();
+        $about = About::all()->first();
+        $setting = Setting::all()->first();
         return view('home')->with([
             'ads' => $ads,
-            'category' => $category
+            'category' => $category,
+            'about' => $about,
+            'setting' => $setting,
         ]);
     }
 }

@@ -21,10 +21,7 @@
                             <span>To Simple ADS</span>
                         </h5>
                         <p class="card-text">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Aspernatur, deserunt, aut assumenda nisi laborum doloremque
-                            quae exercitationem, earum unde amet rem vitae distinctio
-                            sequi esse nam sint cupiditate porro architecto.
+                            {{$about->intro}}
                         </p>
                     </div>
                 </div>
@@ -36,13 +33,7 @@
                     <div class="card-body">
                         <h1 class="card-title">About</h1>
                         <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                            do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud. Ut enim ad minim
-                            veniam. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud. Ut enim
-                            ad minim veniam.
+                            {{$about->about}}
                         </p>
                         <button class="btn btn-about">Started Now</button>
                     </div>

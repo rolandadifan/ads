@@ -2,6 +2,7 @@
 @section('tittle', 'CATEGORY LIST')
 @section('content')
 
+@include('partials.alerts')
 <div class="ml-3">
     <form action="{{route('category.store')}}" method="POST">
         @csrf

@@ -9,29 +9,34 @@
     <div class="container form-contact-us">
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <form>
+                <form action="{{route('message.store')}}" method="post">
+                    @csrf
                     <div class="form-group row">
                         <label for="inputNama" class="col-sm-2 col-form-label">Nama</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputNama" />
+                            <input type="text" name="name" value="{{ old('name') }}" class="form-control @error('name') is-invalid @enderror" />
+                            @error('name') <div class="text-muted">{{ $message }}</div> @enderror
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail3" />
+                            <input type="email" name="email" value="{{ old('email') }}" class="form-control @error('email') is-invalid @enderror" />
+                            @error('email') <div class="text-muted">{{ $message }}</div> @enderror
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputNoTelp" class="col-sm-2 col-form-label">No.Telp</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputNoTelp" />
+                            <input type="number" name="telepon" value="{{ old('telepon') }}" class="form-control @error('telepon') is-invalid @enderror" />
+                            @error('telepon') <div class="text-muted">{{ $message }}</div> @enderror
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputNoTelp" class="col-sm-2 col-form-label">Message</label>
                         <div class="col-sm-10">
-                            <textarea name="message" id="message" cols="50" rows="5" style="width: 100%"></textarea>
+                            <textarea name="message" class="ckeditor form-control @error('message') is-invalid @enderror">{{ old('message')}}</textarea>
+                            @error('message') <div class="text-muted">{{ $message }}</div> @enderror
                         </div>
                     </div>
                     <div class="form-group row button-submit">

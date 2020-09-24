@@ -2,18 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Ad;
-use App\Http\Requests\AdsRequest;
+use App\Models\About;
+use App\Http\Requests\AboutRequest;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class PendingController extends Controller
+class AboutController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -21,9 +16,9 @@ class PendingController extends Controller
      */
     public function index()
     {
-        $ads = Ad::where('status', 'PENDING')->get();
-        return view('Admin.ads.pending')->with([
-            'ads' => $ads,
+        $about = About::all()->first();
+        return view('Admin.pages.about')->with([
+            'about' => $about
         ]);
     }
 
@@ -79,7 +74,13 @@ class PendingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+
+        $ads = About::all()->first();
+        $ads->update($data);
+
+        Alert::success('Berhasil di Update');
+        return redirect()->route('about.index');
     }
 
     /**
@@ -91,19 +92,5 @@ class PendingController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function Status($id)
-    {
-        $data = DB::table('ads')->where('id', $id)->first();
-        $status = $data->status;
-
-        if ($status == 'PENDING') {
-            DB::table('ads')->where('id', $id)->update([
-                'status' => 'ACTIVE'
-            ]);
-            Alert::success('success', 'Ad Active');
-            return redirect()->route('pending.index');
-        }
     }
 }

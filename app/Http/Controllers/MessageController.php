@@ -2,18 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Ad;
-use App\Http\Requests\AdsRequest;
+
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Models\Message;
+use App\Http\Requests\MessageRequest;
+
 use RealRashid\SweetAlert\Facades\Alert;
 
-class PendingController extends Controller
+class MessageController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -21,9 +18,9 @@ class PendingController extends Controller
      */
     public function index()
     {
-        $ads = Ad::where('status', 'PENDING')->get();
-        return view('Admin.ads.pending')->with([
-            'ads' => $ads,
+        $message = Message::orderBy('created_at', 'desc')->get();
+        return view('Admin.pages.message')->with([
+            'message' => $message
         ]);
     }
 
@@ -43,9 +40,14 @@ class PendingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MessageRequest $request)
     {
-        //
+        $data = $request->all();
+
+
+        Message::create($data);
+        Alert::success('Pesan Berhasil Terkirim');
+        return redirect()->route('home');
     }
 
     /**
@@ -56,7 +58,10 @@ class PendingController extends Controller
      */
     public function show($id)
     {
-        //
+        $message = Message::findOrFail($id);
+        return view('Admin.pages.viewmessage')->with([
+            'message' => $message
+        ]);
     }
 
     /**
@@ -90,20 +95,9 @@ class PendingController extends Controller
      */
     public function destroy($id)
     {
-        //
-    }
+        $message = Message::findOrFail($id);
+        $message->delete();
 
-    public function Status($id)
-    {
-        $data = DB::table('ads')->where('id', $id)->first();
-        $status = $data->status;
-
-        if ($status == 'PENDING') {
-            DB::table('ads')->where('id', $id)->update([
-                'status' => 'ACTIVE'
-            ]);
-            Alert::success('success', 'Ad Active');
-            return redirect()->route('pending.index');
-        }
+        return redirect()->route('message.index')->with('warning', 'Pesan Berhasil Dihapus');
     }
 }
