@@ -22,7 +22,7 @@ Route::resource('user', 'UserController');
 Route::middleware('role:admin')->get('/admin/dashboard', 'HomeadminController@index')->name('dashboard');
 Route::resource('ads', 'AdsController')->middleware('role:admin');
 Route::resource('user', 'UserController')->middleware('role:admin');
-Route::resource('admin', 'AdminController')->middleware('role:admin');
+Route::resource('adminlist', 'AdminController')->middleware('role:admin');
 Route::resource('pending', 'PendingController')->middleware('role:admin');
 Route::resource('active', 'ActiveController')->middleware('role:admin');
 Route::resource('category', 'CategoryController')->middleware('role:admin');

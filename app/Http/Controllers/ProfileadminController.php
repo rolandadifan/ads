@@ -62,11 +62,7 @@ class ProfileadminController extends Controller
      */
     public function edit($id)
     {
-        // if (Auth::user()) {
-        //     $user = User::find(Auth::user()->id);
-
-        //     return view('Admin.user.profile')->withUser($user);
-        // }
+        //
     }
 
     /**
