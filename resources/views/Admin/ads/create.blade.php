@@ -67,7 +67,7 @@
         @error('city') <div class="text-muted">{{ $message }}</div> @enderror
     </div>
     <div class="form-group ml-3 mr-5">
-        <label for="photo1" class="form-control-label">Foto 1</label>
+        <label for="photo1" class="form-control-label">Foto 1 <span style="font-size: 15px;">*default</span></label>
         <input type="file" name="photo1" value="{{ old('photo1') }}" accept="image/*" class="form-control @error('photo1') is-invalid @enderror" />
         @error('photo1') <div class="text-muted">{{ $message }}</div> @enderror
     </div>

@@ -3,11 +3,13 @@
 @section('content')
 
 @include('partials.alerts')
-<a href="{{route('ads.create')}}" class="f btn btn-primary btn-md mb-3 active " role="button" aria-pressed="true">+ ADS</a>
-<table class="table table-striped">
-    <thead>
+<a href="{{route('ads.create')}}" role="button" aria-pressed="true"><button class="f btn btn-login" type="submit">+ ADS</button></a>
+<br><br>
+<table id="example1" class="display table table-striped" style="width:100%">
+    <thead class="theadA">
         <tr>
             <th scope="col">No</th>
+            <th scope="col">Name</th>
             <th scope="col">Tittle</th>
             <th scope="col">City</th>
             <th scope="col">Price</th>
@@ -22,6 +24,7 @@
         @foreach($ads as $ad)
         <tr>
             <th scope="row">{{$loop->iteration}}</th>
+            <td>{{$ad->user->name}}</td>
             <td>{{$ad->tittle}}</td>
             <td>{{$ad->city}}</td>
             <td>Rp. {{$ad->price}}</td>
@@ -61,7 +64,7 @@
         @endforeach
     </tbody>
 </table>
-{{ $ads->links() }}
+
 
 
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ad;
+use App\User;
 use App\Http\Requests\AdsRequest;
 use App\Models\Categorie;
 use Illuminate\Http\Request;
@@ -22,7 +23,9 @@ class AdsController extends Controller
      */
     public function index()
     {
-        $ads = Ad::paginate(50);
+        // ambil data berdasarkan login user
+        // $ads = Auth::user()->ads()->get();
+        $ads = Ad::with(['user'])->get();
         return view('Admin.ads.index')->with([
             'ads' => $ads
         ]);

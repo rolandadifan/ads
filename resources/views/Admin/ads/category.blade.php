@@ -12,8 +12,9 @@
     </form>
 </div>
 
-<table class="table table-striped mt-2">
-    <thead>
+<br>
+<table id="example1" class="display table table-striped" style="width:100%">
+    <thead class="theadA">
         <tr>
             <th scope="col">No</th>
             <th scope="col">Category</th>

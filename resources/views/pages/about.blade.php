@@ -35,7 +35,11 @@
                         <p class="card-text">
                             {{$about->about}}
                         </p>
-                        <button class="btn btn-about">Started Now</button>
+                        @guest
+                        <a href="{{route('register')}}"><button class="btn btn-about">Started Now</button></a>
+                        @else
+                        <a href="#"><button class="btn btn-about">Started Now</button></a>
+                        @endguest
                     </div>
                 </div>
             </div>

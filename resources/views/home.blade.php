@@ -17,8 +17,11 @@
                     autem, nulla obcaecati est fugit neque blanditiis eveniet
                     explicabo voluptate ipsa molestiae repellat?
                 </p>
-
-                <a href="register.html"> <button class="btn btn-jumbo">STARTED NOW</button></a>
+                @guest
+                <a href="{{route('register')}}"> <button class="btn btn-jumbo">STARTED NOW</button></a>
+                @else
+                <a href="#"> <button class="btn btn-jumbo">STARTED NOW</button></a>
+                @endguest
             </div>
         </div>
     </div>
@@ -65,7 +68,7 @@
     </div>
     <div class="container ads-item" data-50-top="opacity:1;left:0px;" data-400-top="opacity:0;left:100px;">
         <div class="row mb-3">
-            @foreach($ads as $ad)
+            @forelse($ads as $ad)
             <div class="col-lg-4 col-md-6 mt-3">
                 <div class="card">
                     <img src="{{ url($ad->photo1) }}" class="card-img" alt="Ads-images1" />
@@ -110,7 +113,11 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+            @empty
+            <tr>
+                <td colspan="6" class="" style="margin-left: 900px;">Data tidak tersedia</td>
+            </tr>
+            @endforelse
         </div>
     </div>
 </section>

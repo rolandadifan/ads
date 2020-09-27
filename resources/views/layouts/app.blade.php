@@ -27,11 +27,17 @@
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
+    <!-- font awesome -->
+    <script src="https://use.fontawesome.com/4dae345a39.js"></script>
+
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style1.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/style2.css') }}" rel="stylesheet"> -->
     <script src="https://kit.fontawesome.com/64a4994735.js" crossorigin="anonymous"></script>
 </head>
 
@@ -55,6 +61,8 @@
         </script>
 
         <script type="text/javascript" src="{{asset('js/js/skrollr.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/js/skrollr.menu.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/js/skrollr.min.js')}}"></script>
         <script type="text/javascript">
             var s = skrollr.init();
         </script>

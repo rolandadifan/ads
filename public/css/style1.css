@@ -342,7 +342,7 @@ html {
                 rgba(0, 0, 0, 0.2),
                 rgba(0, 0, 0, 0.5)
             ),
-            url(img/bg-login.png);
+            url("../image/bg-login.png");
         background-size: cover;
     }
 
@@ -353,7 +353,7 @@ html {
 
     .sign-in-container .sign-up-link,
     .sign-up-container .sign-up-link {
-        background-image: url(img/bg-login-left.png);
+        background-image: url("../image/bg-login-left.png");
         background-position-x: -10px;
         text-align: center;
         display: flex;
@@ -389,7 +389,7 @@ html {
 
     .sign-in-container .sign-in-link,
     .sign-up-container .sign-in-link {
-        background-image: url(img/bg-login-left.png);
+        background-image: url("../image/bg-login-left.png");
         background-position-x: -10px;
         text-align: center;
         display: flex;
@@ -573,7 +573,7 @@ html {
                 rgba(0, 0, 0, 0.2),
                 rgba(0, 0, 0, 0.5)
             ),
-            url(img/bg-login.png);
+            url("../image/bg-login.png");
         background-size: cover;
     }
 
@@ -584,7 +584,7 @@ html {
 
     .sign-in-container .sign-up-link,
     .sign-up-container .sign-up-link {
-        background-image: url(img/bg-login-left.png);
+        background-image: url("../image/bg-login-left.png");
         background-position-x: -10px;
         text-align: center;
         display: flex;
@@ -620,7 +620,7 @@ html {
 
     .sign-in-container .sign-in-link,
     .sign-up-container .sign-in-link {
-        background-image: url(img/bg-login-left.png);
+        background-image: url("../image/bg-login-left.png");
         background-position-x: -10px;
         text-align: center;
         display: flex;
@@ -1013,7 +1013,7 @@ html {
                 rgba(0, 0, 0, 0.2),
                 rgba(0, 0, 0, 0.5)
             ),
-            url(img/bg-login.png);
+            url("..image/bg-login.png");
         background-size: cover;
     }
 
@@ -1024,7 +1024,7 @@ html {
 
     .sign-in-container .sign-up-link,
     .sign-up-container .sign-up-link {
-        background-image: url(img/bg-login-left.png);
+        background-image: url("../image/bg-login-left.png");
         background-position-x: -10px;
         text-align: center;
         display: flex;
@@ -1060,7 +1060,7 @@ html {
 
     .sign-in-container .sign-in-link,
     .sign-up-container .sign-in-link {
-        background-image: url(img/bg-login-left.png);
+        background-image: url("../image/bg-login-left.png");
         background-position-x: -10px;
         text-align: center;
         display: flex;
@@ -1705,7 +1705,7 @@ html {
                 rgba(0, 0, 0, 0.2),
                 rgba(0, 0, 0, 0.5)
             ),
-            url(img/bg-login.png);
+            url("../image/bg-login.png");
         background-size: cover;
     }
 
@@ -1716,7 +1716,7 @@ html {
 
     .sign-in-container .sign-up-link,
     .sign-up-container .sign-up-link {
-        background-image: url(img/bg-login-left.png);
+        background-image: url("../image/bg-login-left.png");
         background-position-x: -10px;
         text-align: center;
         display: flex;
@@ -1753,7 +1753,7 @@ html {
 
     .sign-in-container .sign-in-link,
     .sign-up-container .sign-in-link {
-        background-image: url(img/bg-login-left.png);
+        background-image: url("../image/bg-login-left.png");
         background-position-x: -10px;
         background-position-x: -10px;
         text-align: center;
@@ -1965,5 +1965,10 @@ html {
     .footer-1 .company li a:hover {
         border-bottom: 1px solid #707070;
         color: #6e3c1f;
+    }
+    .form-control1 {
+        margin-top: 10px;
+        padding: 0px;
+        margin-bottom: 10px;
     }
 }

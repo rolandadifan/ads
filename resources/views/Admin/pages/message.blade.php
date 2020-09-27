@@ -3,8 +3,8 @@
 @section('content')
 @include('partials.alerts')
 
-<table class="table table-striped">
-    <thead>
+<table id="example1" class="display table table-striped" style="width:100%">
+    <thead class="theadA">
         <tr>
             <th scope="col">No</th>
             <th scope="col">Name</th>

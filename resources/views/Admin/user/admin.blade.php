@@ -3,9 +3,9 @@
 @section('content')
 
 
-<a href="#" class="f btn btn-primary btn-md mb-3 active " role="button" aria-pressed="true">+ Admin</a>
-<table class="table table-striped">
-    <thead>
+<!-- <a href="{{route('admin.create')}}" class="f btn btn-primary btn-md mb-3 active " role="button" aria-pressed="true">+ Admin</a> -->
+<table id="example1" class="display table table-striped" style="width:100%">
+    <thead class="theadA">
         <tr>
             <th scope="col">#</th>
             <th scope="col">Name</th>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ad;
 use App\User;
+use App\Models\Message;
 use Illuminate\Http\Request;
 
 class HomeadminController extends Controller
@@ -20,11 +21,13 @@ class HomeadminController extends Controller
         $sum1 = Ad::where('status', 'ACTIVE')->count('status', 'ACTIVE');
         $sum2 = Ad::all()->count();
         $sum3 = User::all()->count();
+        $sum4 = Message::all()->count();
         return view('Admin.index')->with([
             'sum' => $sum,
             'sum1' => $sum1,
             'sum2' => $sum2,
             'sum3' => $sum3,
+            'sum4' => $sum4,
         ]);
     }
 }

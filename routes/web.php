@@ -16,15 +16,19 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::middleware('role:admin')->get('/admin/dashboard', 'HomeadminController@index')->name('dashboard');
-Route::resource('ads', 'AdsController');
 Route::resource('user', 'UserController');
-Route::resource('admin', 'AdminController');
-Route::resource('pending', 'PendingController');
-Route::resource('active', 'ActiveController');
-Route::resource('category', 'CategoryController');
-Route::resource('message', 'MessageController');
-Route::resource('about', 'AboutController');
-Route::resource('setting', 'SettingController');
+
+// Admin Route
+Route::middleware('role:admin')->get('/admin/dashboard', 'HomeadminController@index')->name('dashboard');
+Route::resource('ads', 'AdsController')->middleware('role:admin');
+Route::resource('user', 'UserController')->middleware('role:admin');
+Route::resource('admin', 'AdminController')->middleware('role:admin');
+Route::resource('pending', 'PendingController')->middleware('role:admin');
+Route::resource('active', 'ActiveController')->middleware('role:admin');
+Route::resource('category', 'CategoryController')->middleware('role:admin');
+Route::resource('message', 'MessageController')->middleware('role:admin');
+Route::resource('about', 'AboutController')->middleware('role:admin');
+Route::resource('setting', 'SettingController')->middleware('role:admin');
+Route::resource('profile/admin', 'ProfileadminController')->middleware('role:admin');
 Route::get('pending/status/{id}', 'PendingController@Status');
 Route::get('active/status/{id}', 'ActiveController@Status');
