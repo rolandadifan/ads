@@ -8,7 +8,7 @@
             <div class="col-md-10 col-sm-12">
                 <div class="row">
                     <div class="col-md-1 col-sm-1 col-1 sign-up-link justify-content-center">
-                        <a href="{{ route('register')}}">
+                        {{-- <a href="{{ route('register')}}">
                             <button class="btn-sign-up">
                                 <p>S</p>
                                 <p>I</p>
@@ -18,12 +18,12 @@
                                 <p>U</p>
                                 <p>P</p>
                             </button>
-                        </a>
+                        </a> --}}
                     </div>
                     <div class="col-md col-sm col form-content">
                         <div class="row text-center">
                             <div class="col-md">
-                                <h3>Welcome Back</h3>
+                                <h3>Welcome Admin</h3>
                             </div>
                         </div>
                         <div class="row mt-4">
@@ -63,7 +63,7 @@
                                     </div>
                                     <button type="submit" class="btn btn-danger text-success">Sign In</button>
                                     @if (Route::has('password.request'))
-                                    <a class="forgot" href="{{ route('password.request') }}">
+                                    <a class="forgot" href="#">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                     @endif
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                     <div class="col-md-1 col-sm-1 col-1 sign-in-link  justify-content-center">
-                        <button class="btn-sign-in">
+                        {{-- <button class="btn-sign-in">
                             <p>S</p>
                             <p>I</p>
                             <p>G</p>
@@ -116,7 +116,7 @@
                             <br>
                             <p>I</p>
                             <p>N</p>
-                        </button>
+                        </button> --}}
                     </div>
                 </div>
             </div>

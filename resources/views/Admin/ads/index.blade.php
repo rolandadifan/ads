@@ -13,6 +13,7 @@
             <th scope="col">Tittle</th>
             <th scope="col">City</th>
             <th scope="col">Price</th>
+            <th scope="col">Category</th>
             <th scope="col">Photo 1</th>
             <th scope="col">Photo 2</th>
             <th scope="col">Photo 3</th>
@@ -28,6 +29,7 @@
             <td>{{$ad->tittle}}</td>
             <td>{{$ad->city}}</td>
             <td>Rp. {{$ad->price}}</td>
+            <td>{{$ad->categories->name}}</td>
             <td>
                 <img width="50px" src="{{url($ad->photo1)}}" alt="" />
             </td>

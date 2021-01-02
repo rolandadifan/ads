@@ -13,6 +13,7 @@
                 <div class="form-group ml-3 mr-5">
                     <h1 class="prof2 mt-5 mr-3">{{ Auth::user()->email }}</h1>
                 </div>
+
                 <div class="form-group ml-3 mr-5">
                     <label for="name" class="prof3 form-control-label">Nama</label>
                     <input type="text" name="name" value="{{ old('Auth::user()->name') ? old('Auth::user()->name') : Auth::user()->name }}" class="form-control @error('Auth::user()->name') is-invalid @enderror" />

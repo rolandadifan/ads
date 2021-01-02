@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,19 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
+
+Route::post('/ad', 'Api\AdController@create');
+Route::get('/ad', 'Api\AdController@index');
+Route::get('/all', 'Api\AdController@getAll');
+Route::get('/myads', 'Api\AdController@myads');
+Route::get('/ad/{id}', 'Api\AdController@show');
+Route::delete('/ad/{id}', 'Api\AdController@destroy');
+Route::put('/ad/{id}', 'Api\AdController@update');
+
+
+Route::get('/category', 'Api\CategoryController@index');
+
+Route::post('/message', 'Api\MessageController@create');
+
+Route::get('/about', 'Api\AboutController@index');

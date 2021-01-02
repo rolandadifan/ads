@@ -22,9 +22,9 @@ class CreateAdsTable extends Migration
             $table->string('description');
             $table->string('status');
             $table->string('city');
-            $table->string('photo1');
-            $table->string('photo2');
-            $table->string('photo3');
+            $table->string('photo1')->nullable();
+            $table->string('photo2')->nullable();
+            $table->string('photo3')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

@@ -25,7 +25,7 @@ class AdsController extends Controller
     {
         // ambil data berdasarkan login user
         // $ads = Auth::user()->ads()->get();
-        $ads = Ad::with(['user'])->get();
+        $ads = Ad::with(['user'], ['categories'])->get();
         return view('Admin.ads.index')->with([
             'ads' => $ads
         ]);
@@ -53,18 +53,39 @@ class AdsController extends Controller
     public function store(AdsRequest $request)
     {
         $data = $request->all();
+
         $data['photo1'] = $request->file('photo1')->store(
             'assets/product',
             'public'
         );
+
         $data['photo2'] = $request->file('photo2')->store(
             'assets/product',
             'public'
         );
+
+
         $data['photo3'] = $request->file('photo3')->store(
             'assets/product',
             'public'
         );
+
+        // upload menggunakan aws
+        // $data['photo1'] = $request->file('photo1')->store(
+        //     'assets/ads',
+        //     's3'
+        // );
+
+        // $data['photo2'] = $request->file('photo2')->store(
+        //     'assets/ads',
+        //     's3'
+        // );
+
+        // $data['photo3'] = $request->file('photo3')->store(
+        //     'assets/ads',
+        //     's3'
+        // );
+
 
         Ad::create($data);
         return redirect()->route('ads.index')->with('success', 'Data Berhasil Ditambah');

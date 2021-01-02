@@ -15,11 +15,11 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
-Route::resource('user', 'UserController');
+// Route::get('/', 'HomeController@index')->name('home');
+// Route::resource('user', 'UserController');
 
 // Admin Route
-Route::middleware('role:admin')->get('/admin/dashboard', 'HomeadminController@index')->name('dashboard');
+Route::middleware('role:admin')->get('/', 'HomeadminController@index')->name('dashboard');
 Route::resource('ads', 'AdsController')->middleware('role:admin');
 Route::resource('user', 'UserController')->middleware('role:admin');
 Route::resource('adminlist', 'AdminController')->middleware('role:admin');
